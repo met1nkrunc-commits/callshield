@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.2" type="incidents">
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for jetbrains-kotlinx-coroutines-core"
+            robot="true">
+            <fix-replace
+                description="Replace with kotlinxCoroutinesCoreVersion = &quot;1.8.1&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="kotlinxCoroutinesCoreVersion = &quot;1.8.1&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="105"
+                    endOffset="105"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with jetbrains-kotlinx-coroutines-core = { module = &quot;org.jetbrains.kotlinx:kotlinx-coroutines-core&quot;, version.ref = &quot;kotlinxCoroutinesCoreVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="jetbrains-kotlinx-coroutines-core = { module = &quot;org.jetbrains.kotlinx:kotlinx-coroutines-core&quot;, version.ref = &quot;kotlinxCoroutinesCoreVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="1053"
+                    endOffset="1053"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.jetbrains.kotlinx.coroutines.core"
+                robot="true"
+                replacement="libs.jetbrains.kotlinx.coroutines.core"
+                priority="0">
+                <range
+                    file="${:shared*projectDir}/build.gradle.kts"
+                    startOffset="808"
+                    endOffset="861"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="33"
+            column="28"
+            startOffset="808"
+            endLine="33"
+            endColumn="81"
+            endOffset="861"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for jetbrains-kotlinx-datetime"
+            robot="true">
+            <fix-replace
+                description="Replace with kotlinxDatetimeVersion = &quot;0.6.0&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="kotlinxDatetimeVersion = &quot;0.6.0&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="105"
+                    endOffset="105"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with jetbrains-kotlinx-datetime = { module = &quot;org.jetbrains.kotlinx:kotlinx-datetime&quot;, version.ref = &quot;kotlinxDatetimeVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="jetbrains-kotlinx-datetime = { module = &quot;org.jetbrains.kotlinx:kotlinx-datetime&quot;, version.ref = &quot;kotlinxDatetimeVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="1053"
+                    endOffset="1053"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.jetbrains.kotlinx.datetime"
+                robot="true"
+                replacement="libs.jetbrains.kotlinx.datetime"
+                priority="0">
+                <range
+                    file="${:shared*projectDir}/build.gradle.kts"
+                    startOffset="890"
+                    endOffset="936"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="34"
+            column="28"
+            startOffset="890"
+            endLine="34"
+            endColumn="74"
+            endOffset="936"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for ktor-ktor-client-core"
+            robot="true">
+            <fix-replace
+                description="Replace with ktorVersion = &quot;2.3.12&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktorVersion = &quot;2.3.12&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="168"
+                    endOffset="168"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with ktor-ktor-client-core = { module = &quot;io.ktor:ktor-client-core&quot;, version.ref = &quot;ktorVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktor-ktor-client-core = { module = &quot;io.ktor:ktor-client-core&quot;, version.ref = &quot;ktorVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="1053"
+                    endOffset="1053"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.ktor.ktor.client.core"
+                robot="true"
+                replacement="libs.ktor.ktor.client.core"
+                priority="0">
+                <range
+                    file="${:shared*projectDir}/build.gradle.kts"
+                    startOffset="965"
+                    endOffset="1004"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="35"
+            column="28"
+            startOffset="965"
+            endLine="35"
+            endColumn="67"
+            endOffset="1004"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for ktor-ktor-client-content-negotiation"
+            robot="true">
+            <fix-replace
+                description="Replace with ktorVersion = &quot;2.3.12&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktorVersion = &quot;2.3.12&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="168"
+                    endOffset="168"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with ktor-ktor-client-content-negotiation = { module = &quot;io.ktor:ktor-client-content-negotiation&quot;, version.ref = &quot;ktorVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktor-ktor-client-content-negotiation = { module = &quot;io.ktor:ktor-client-content-negotiation&quot;, version.ref = &quot;ktorVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="1053"
+                    endOffset="1053"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.ktor.ktor.client.content.negotiation"
+                robot="true"
+                replacement="libs.ktor.ktor.client.content.negotiation"
+                priority="0">
+                <range
+                    file="${:shared*projectDir}/build.gradle.kts"
+                    startOffset="1033"
+                    endOffset="1087"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="36"
+            column="28"
+            startOffset="1033"
+            endLine="36"
+            endColumn="82"
+            endOffset="1087"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for ktor-ktor-serialization-kotlinx-json"
+            robot="true">
+            <fix-replace
+                description="Replace with ktorVersion = &quot;2.3.12&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktorVersion = &quot;2.3.12&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="168"
+                    endOffset="168"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with ktor-ktor-serialization-kotlinx-json = { module = &quot;io.ktor:ktor-serialization-kotlinx-json&quot;, version.ref = &quot;ktorVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktor-ktor-serialization-kotlinx-json = { module = &quot;io.ktor:ktor-serialization-kotlinx-json&quot;, version.ref = &quot;ktorVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="1053"
+                    endOffset="1053"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.ktor.ktor.serialization.kotlinx.json"
+                robot="true"
+                replacement="libs.ktor.ktor.serialization.kotlinx.json"
+                priority="0">
+                <range
+                    file="${:shared*projectDir}/build.gradle.kts"
+                    startOffset="1116"
+                    endOffset="1170"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="37"
+            column="28"
+            startOffset="1116"
+            endLine="37"
+            endColumn="82"
+            endOffset="1170"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for jetbrains-kotlinx-serialization-json"
+            robot="true">
+            <fix-replace
+                description="Replace with kotlinxSerializationJsonVersion = &quot;1.7.1&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="kotlinxSerializationJsonVersion = &quot;1.7.1&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="105"
+                    endOffset="105"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with jetbrains-kotlinx-serialization-json = { module = &quot;org.jetbrains.kotlinx:kotlinx-serialization-json&quot;, version.ref = &quot;kotlinxSerializationJsonVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="jetbrains-kotlinx-serialization-json = { module = &quot;org.jetbrains.kotlinx:kotlinx-serialization-json&quot;, version.ref = &quot;kotlinxSerializationJsonVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="1053"
+                    endOffset="1053"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.jetbrains.kotlinx.serialization.json"
+                robot="true"
+                replacement="libs.jetbrains.kotlinx.serialization.json"
+                priority="0">
+                <range
+                    file="${:shared*projectDir}/build.gradle.kts"
+                    startOffset="1199"
+                    endOffset="1255"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="38"
+            column="28"
+            startOffset="1199"
+            endLine="38"
+            endColumn="84"
+            endOffset="1255"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use the existing version catalog reference (`libs.coroutines.android`) instead">
+        <fix-replace
+            description="Replace with existing version catalog reference `coroutines-android`"
+            robot="true"
+            independent="true"
+            replacement="libs.coroutines.android"
+            priority="0">
+            <range
+                file="${:shared*projectDir}/build.gradle.kts"
+                startOffset="1329"
+                endOffset="1385"/>
+        </fix-replace>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="41"
+            column="28"
+            startOffset="1329"
+            endLine="41"
+            endColumn="84"
+            endOffset="1385"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for ktor-ktor-client-okhttp"
+            robot="true">
+            <fix-replace
+                description="Replace with ktorVersion = &quot;2.3.12&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktorVersion = &quot;2.3.12&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="168"
+                    endOffset="168"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with ktor-ktor-client-okhttp = { module = &quot;io.ktor:ktor-client-okhttp&quot;, version.ref = &quot;ktorVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktor-ktor-client-okhttp = { module = &quot;io.ktor:ktor-client-okhttp&quot;, version.ref = &quot;ktorVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="1053"
+                    endOffset="1053"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.ktor.ktor.client.okhttp"
+                robot="true"
+                replacement="libs.ktor.ktor.client.okhttp"
+                priority="0">
+                <range
+                    file="${:shared*projectDir}/build.gradle.kts"
+                    startOffset="1414"
+                    endOffset="1455"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="42"
+            column="28"
+            startOffset="1414"
+            endLine="42"
+            endColumn="69"
+            endOffset="1455"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for ktor-ktor-client-darwin"
+            robot="true">
+            <fix-replace
+                description="Replace with ktorVersion = &quot;2.3.12&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktorVersion = &quot;2.3.12&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="168"
+                    endOffset="168"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with ktor-ktor-client-darwin = { module = &quot;io.ktor:ktor-client-darwin&quot;, version.ref = &quot;ktorVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="ktor-ktor-client-darwin = { module = &quot;io.ktor:ktor-client-darwin&quot;, version.ref = &quot;ktorVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/OneDrive/Desktop/Callshield/gradle/libs.versions.toml"
+                    startOffset="1053"
+                    endOffset="1053"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.ktor.ktor.client.darwin"
+                robot="true"
+                replacement="libs.ktor.ktor.client.darwin"
+                priority="0">
+                <range
+                    file="${:shared*projectDir}/build.gradle.kts"
+                    startOffset="1610"
+                    endOffset="1651"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="47"
+            column="36"
+            startOffset="1610"
+            endLine="47"
+            endColumn="77"
+            endOffset="1651"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-core than 1.8.1 is available: 1.9.0">
+        <fix-replace
+            description="Change to 1.9.0"
+            family="Update versions"
+            oldString="1.8.1"
+            replacement="1.9.0"
+            priority="0"/>
+        <location
+            file="${:shared*projectDir}/build.gradle.kts"
+            line="33"
+            column="28"
+            startOffset="808"
+            endLine="33"
+            endColumn="81"
+            endOffset="861"/>
+    </incident>
+
+</incidents>

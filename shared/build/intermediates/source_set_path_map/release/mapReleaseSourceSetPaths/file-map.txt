@@ -1,0 +1,9 @@
+com.bengel.shared-pngs-0 C:\Users\met1n\OneDrive\Desktop\Callshield\shared\build\generated\res\pngs\release
+com.bengel.shared-resValues-1 C:\Users\met1n\OneDrive\Desktop\Callshield\shared\build\generated\res\resValues\release
+com.bengel.shared-mergeReleaseResources-2 C:\Users\met1n\OneDrive\Desktop\Callshield\shared\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.bengel.shared-mergeReleaseResources-3 C:\Users\met1n\OneDrive\Desktop\Callshield\shared\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.bengel.shared-release-4 C:\Users\met1n\OneDrive\Desktop\Callshield\shared\build\intermediates\merged_res\release\mergeReleaseResources
+com.bengel.shared-androidMain-5 C:\Users\met1n\OneDrive\Desktop\Callshield\shared\src\androidMain\res
+com.bengel.shared-androidRelease-6 C:\Users\met1n\OneDrive\Desktop\Callshield\shared\src\androidRelease\res
+com.bengel.shared-main-7 C:\Users\met1n\OneDrive\Desktop\Callshield\shared\src\main\res
+com.bengel.shared-release-8 C:\Users\met1n\OneDrive\Desktop\Callshield\shared\src\release\res
