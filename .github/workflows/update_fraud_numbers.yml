@@ -34,12 +34,7 @@ jobs:
 
       # ── 4. Scraper çalıştır ───────────────────────────────────────────────
       - name: Run Şikayetvar scraper
-        run: |
-          python scripts/sikayetvar_scraper.py \
-            --output fraud_numbers.json \
-            --pages 3
-        # Şikayetvar'a aşırı yük bindirmemek için pages=3 yeterli.
-        # Daha kapsamlı tarama için --pages 10 yapılabilir.
+        run: python scripts/sikayetvar_scraper.py --output fraud_numbers.json
 
       # ── 5. Değişiklik varsa commit at ─────────────────────────────────────
       - name: Commit updated fraud numbers
