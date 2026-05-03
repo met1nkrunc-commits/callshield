@@ -4,7 +4,7 @@ import Foundation
 // "GITHUB_USER/REPO_NAME" kısmını kendi repo bilginizle değiştirin.
 // Örnek: "metinkorunc/callshield-data"
 private let fraudDataURL =
-    "https://cdn.jsdelivr.net/gh/metinkorunc/callshield@main/fraud_numbers.json"
+    "https://cdn.jsdelivr.net/gh/met1nkrunc-commits/callshield@main/fraud_numbers.json"
 
 // MARK: - Codable DTOs
 
