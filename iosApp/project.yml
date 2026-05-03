@@ -1,0 +1,63 @@
+name: Callshield
+options:
+  bundleIdPrefix: com.callshield
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: ""          # Set in CI via DEVELOPMENT_TEAM secret
+    CODE_SIGN_STYLE: Automatic
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+
+targets:
+  Callshield:
+    type: application
+    platform: iOS
+    sources:
+      - path: Callshield
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.callshield.ios
+        INFOPLIST_FILE: Callshield/App/Info.plist
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+    entitlements:
+      path: Callshield/Callshield.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.callshield
+    dependencies:
+      - target: SmsFilter
+        embed: true
+
+  SmsFilter:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: SmsFilter
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.callshield.ios.SmsFilter
+        INFOPLIST_FILE: SmsFilter/Info.plist
+    entitlements:
+      path: SmsFilter/SmsFilter.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.callshield
+    dependencies:
+      - sdk: IdentityLookup.framework
+
+schemes:
+  Callshield:
+    build:
+      targets:
+        Callshield: all
+        SmsFilter: all
+    run:
+      config: Debug
+    archive:
+      config: Release

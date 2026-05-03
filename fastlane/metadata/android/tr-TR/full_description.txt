@@ -1,0 +1,23 @@
+Callshield, Türkiye'ye özel dolandırıcılık koruması sunan ücretsiz bir güvenlik uygulamasıdır.
+
+🛡️ NELER ENGELLER?
+• Sahte bahis ve kumar siteleri (bets10, 1xbet, vaycasino ve 300+ site)
+• "İcra takibi başlatılacak" tarzı yasal tehdit mesajları
+• Kimlik avı (phishing) SMS'leri ve şüpheli kısa URL'ler
+• Yatırım dolandırıcılığı ve kripto vaat mesajları
+• Kargo dolandırıcılığı ("kargonuz bekliyor")
+• Sahte çekiliş ve ödül bildirimleri
+
+🔒 GİZLİLİĞİNİZ ÖNCELİĞİMİZ
+Tüm analiz cihazınızda gerçekleşir. SMS içeriğiniz veya kişisel bilgileriniz hiçbir sunucuya gönderilmez.
+
+⚡ NASIL ÇALIŞIR?
+1. Gelen SMS içeriği yerel olarak taranır
+2. Gelen aramalar anlık olarak kontrol edilir
+3. Liste her 24 saatte bir otomatik güncellenir
+4. Şüpheli içerik tespit edildiğinde bildirim alırsınız
+
+📊 PREMIUM ÖZELLİKLER
+IPQS entegrasyonu ile gerçek zamanlı spam skoru ve detaylı istatistikler.
+
+🇹🇷 Türkiye'ye özel kelime analizi ve 10.000+ bilinen dolandırıcı numara veritabanı.

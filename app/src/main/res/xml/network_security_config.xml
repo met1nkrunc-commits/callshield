@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Cleartext HTTP is disabled globally.
+    Only system-trusted CAs are accepted.
+    Explicit domain allowlist for outbound HTTPS calls.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Fraud list fetch (public GitHub raw content, no user data sent) -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="false">raw.githubusercontent.com</domain>
+    </domain-config>
+
+    <!-- IPQS premium phone-number lookup -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">ipqualityscore.com</domain>
+    </domain-config>
+</network-security-config>

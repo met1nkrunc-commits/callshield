@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Android 12+ (API 31+) cloud backup ve cihaz transferi kuralları.
+    Play Store Data Safety: Kullanıcı verileri buluta gönderilmez.
+    SMS içeriği, arama geçmişi, engellenen numaralar — hepsi yalnızca cihazda.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Tüm Room veritabanı cloud'a GİTMESİN (kişisel veri içeriyor) -->
+        <exclude domain="database" path="callshield.db" />
+        <exclude domain="database" path="callshield.db-shm" />
+        <exclude domain="database" path="callshield.db-wal" />
+        <!-- DataStore preferences (API key, plan bilgisi, ayarlar) -->
+        <exclude domain="file" path="datastore/" />
+        <!-- TFLite model cache -->
+        <exclude domain="file" path="models/" />
+        <!-- Temp exports -->
+        <exclude domain="file" path="export/" />
+    </cloud-backup>
+    <device-transfer>
+        <!--
+            Cihaz değişiminde SADECE kullanıcının manuel eklediği güvenilir numaralar taşınır.
+            Spam/engelleme geçmişi ve karantina taşınmaz — kişisel içerik riski.
+        -->
+        <exclude domain="database" path="callshield.db" />
+        <exclude domain="database" path="callshield.db-shm" />
+        <exclude domain="database" path="callshield.db-wal" />
+        <exclude domain="file" path="datastore/" />
+    </device-transfer>
+</data-extraction-rules>

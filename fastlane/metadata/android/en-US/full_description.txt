@@ -1,0 +1,23 @@
+Callshield is a free security app built specifically for Turkey, protecting you from fraud calls and spam SMS messages.
+
+🛡️ WHAT IT BLOCKS
+• Fake betting and gambling sites (bets10, 1xbet, vaycasino and 300+ sites)
+• Legal threat SMS ("icra takibi" / debt enforcement scams)
+• Phishing messages and suspicious short URLs
+• Investment and crypto scams
+• Fake delivery SMS ("your package is waiting")
+• Prize and lottery scams
+
+🔒 YOUR PRIVACY IS OUR PRIORITY
+All analysis happens on your device. Your SMS content and personal information are never sent to any server.
+
+⚡ HOW IT WORKS
+1. Incoming SMS content is scanned locally on-device
+2. Incoming calls are instantly checked against our database
+3. Fraud number list auto-updates every 24 hours
+4. You receive a notification when suspicious content is detected
+
+📊 PREMIUM FEATURES
+Real-time spam scoring via IPQS integration and detailed blocking statistics.
+
+🇹🇷 Turkey-specific keyword analysis with a database of 10,000+ known fraud numbers.

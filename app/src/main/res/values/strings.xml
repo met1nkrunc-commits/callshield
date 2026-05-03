@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Callshield</string>
+    <!-- Google Play store listing short description (max 80 chars) -->
+    <string name="app_description">Türkiye\'ye özel spam &amp; dolandırıcı arama/SMS engelleyici</string>
+
+    <!-- Permission rationale strings (shown in system dialogs) -->
+    <string name="rationale_sms">Callshield, spam SMS\'leri tespit edip engellemek için SMS iznine ihtiyaç duyar. SMS içeriği cihazınızda analiz edilir, hiçbir zaman sunucuya gönderilmez.</string>
+    <string name="rationale_call_log">Gelen aramaların dolandırıcılık kontrolü için arama kaydına erişim gereklidir. Veriler cihazda kalır.</string>
+    <string name="rationale_phone_state">Aktif aramanın numarasını alıp risk analizi yapmak için bu izin gereklidir.</string>
+    <string name="rationale_notifications">Şüpheli arama ve SMS geldiğinde anında uyarı alabilmek için bildirim izni gereklidir.</string>
+    <string name="rationale_overlay">Arama sırasında şüpheli numara uyarısı göstermek için ekran üstü izni gereklidir.</string>
+</resources>
