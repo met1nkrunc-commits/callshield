@@ -1,12 +1,13 @@
 import SwiftUI
 
 struct SetupGuideView: View {
+    @AppStorage("filterSetupConfirmed") private var filterSetupConfirmed = false
     private let steps: [(String, String)] = [
         ("Ayarlar'ı Açın",          "gear"),
         ("Mesajlar'a girin",         "message.fill"),
         ("Bilinmeyen ve Spam",       "person.fill.questionmark"),
         ("SMS Filtresi'ne dokunun",  "checkmark.shield"),
-        ("B-engel'i seçin",          "shield.fill"),
+        ("Siper'i seçin",            "shield.fill"),
     ]
 
     var body: some View {
@@ -38,7 +39,7 @@ struct SetupGuideView: View {
                                     .foregroundStyle(.black)
                             }
                             Label(step.0, systemImage: step.1)
-                                .font(.subheadline).fontWeight(.medium)
+                                .font(.subheadline.weight(.medium))
                                 .foregroundStyle(CS.primary)
                             Spacer()
                         }
@@ -72,6 +73,21 @@ struct SetupGuideView: View {
                     .foregroundStyle(CS.secondary)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 12)
+
+                Button {
+                    filterSetupConfirmed.toggle()
+                } label: {
+                    Label(
+                        filterSetupConfirmed ? "Kurulum Onayını Kaldır" : "Filtreyi Etkinleştirdim",
+                        systemImage: filterSetupConfirmed ? "xmark.circle" : "checkmark.circle.fill"
+                    )
+                    .font(.headline)
+                    .foregroundStyle(filterSetupConfirmed ? CS.primary : .black)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 14)
+                    .background(filterSetupConfirmed ? CS.surfaceVar : CS.accent)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
 
                 Spacer(minLength: 32)
             }

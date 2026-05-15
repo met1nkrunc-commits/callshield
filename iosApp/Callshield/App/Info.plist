@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleDisplayName</key>
-    <string>B-engel</string>
+    <string>Siper</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -18,6 +18,10 @@
     <string>$(MARKETING_VERSION)</string>
     <key>CFBundleVersion</key>
     <string>$(CURRENT_PROJECT_VERSION)</string>
+    <key>GADApplicationIdentifier</key>
+    <string>$(ADMOB_APP_ID)</string>
+    <key>GADBannerAdUnitID</key>
+    <string>$(ADMOB_BANNER_AD_UNIT_ID)</string>
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>NSAppTransportSecurity</key>
@@ -25,15 +29,19 @@
         <key>NSAllowsArbitraryLoads</key>
         <false/>
     </dict>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>Bu izin, reklam performansını ölçmek ve daha alakalı reklamlar göstermek için kullanılır.</string>
     <key>UIApplicationSceneManifest</key>
     <dict>
         <key>UIApplicationSupportsMultipleScenes</key>
         <false/>
     </dict>
-    <key>UILaunchScreen</key>
-    <dict/>
-    <key>UISupportedInterfaceOrientations</key>
-    <array>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
         <string>UIInterfaceOrientationPortrait</string>
     </array>
 </dict>

@@ -3,6 +3,7 @@ import UserNotifications
 
 struct OnboardingView: View {
     @AppStorage("onboardingDone") private var onboardingDone = false
+    @AppStorage("filterSetupConfirmed") private var filterSetupConfirmed = false
     @State private var page = 0
 
     var body: some View {
@@ -45,11 +46,16 @@ struct OnboardingView: View {
     private var buttonTitle: String {
         switch page {
         case 2: return "Bildirim İzni Ver"
+        case 1: return filterSetupConfirmed ? "Devam Et" : "Önce Filtreyi Onayla"
         default: return "Devam Et"
         }
     }
 
     private func next() {
+        if page == 1 && !filterSetupConfirmed {
+            return
+        }
+
         if page < 2 {
             withAnimation { page += 1 }
         } else {
@@ -78,7 +84,7 @@ private struct WelcomePage: View {
                 withAnimation(.easeInOut(duration: 1.8).repeatForever(autoreverses: true)) { scale = 1.15 }
             }
             VStack(spacing: 12) {
-                Text("B-engel'e Hoş Geldin").font(.title).fontWeight(.bold).foregroundStyle(CS.primary)
+                Text("Siper'e Hoş Geldin").font(.title).fontWeight(.bold).foregroundStyle(CS.primary)
                 Text("Spam SMS'leri ve sahte aramaları tespit eden, Türkiye'ye özel koruma uygulaması.")
                     .font(.subheadline).foregroundStyle(CS.secondary).multilineTextAlignment(.center)
             }
@@ -101,6 +107,7 @@ private struct WelcomePage: View {
 
 private struct SmsFilterPage: View {
     @Environment(\.openURL) private var openURL
+    @AppStorage("filterSetupConfirmed") private var filterSetupConfirmed = false
 
     var body: some View {
         VStack(spacing: 24) {
@@ -108,7 +115,7 @@ private struct SmsFilterPage: View {
             Image(systemName: "message.badge.filled.fill").font(.system(size: 64)).foregroundStyle(CS.accent)
             VStack(spacing: 10) {
                 Text("SMS Filtresini Aktif Et").font(.title2).fontWeight(.bold).foregroundStyle(CS.primary)
-                Text("Spam SMS'lerin otomatik filtrelenmesi için Mesajlar ayarlarında B-engel'i seçmen gerekiyor.")
+                Text("Spam SMS'lerin otomatik filtrelenmesi için Mesajlar ayarlarında Siper'i seçmen gerekiyor.")
                     .font(.subheadline).foregroundStyle(CS.secondary).multilineTextAlignment(.center)
             }
             Text("iOS bu özellik için doğrudan Bilinmeyen ve Spam ekranını açtırmaz. Buton yalnızca uygulama ayarlarını açar; aşağıdaki yolu manuel izlemen gerekir.")
@@ -145,11 +152,26 @@ private struct SmsFilterPage: View {
                 }
             }
             .background(CS.surface).clipShape(RoundedRectangle(cornerRadius: 14))
+
+            Button {
+                filterSetupConfirmed.toggle()
+            } label: {
+                Label(
+                    filterSetupConfirmed ? "Etkinleştirme Onaylı" : "Siper'i Seçtim",
+                    systemImage: filterSetupConfirmed ? "checkmark.circle.fill" : "checkmark.circle"
+                )
+                .font(.headline)
+                .foregroundStyle(filterSetupConfirmed ? .black : CS.primary)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(filterSetupConfirmed ? CS.accent : CS.surface)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
             Spacer()
         }
         .padding(.horizontal, 28)
     }
-    private let steps = ["Ayarlar → Mesajlar", "Bilinmeyen ve Spam", "SMS Filtresi", "B-engel'i seç"]
+    private let steps = ["Ayarlar → Mesajlar", "Bilinmeyen ve Spam", "SMS Filtresi", "Siper'i seç"]
 }
 
 private struct NotificationPage: View {

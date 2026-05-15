@@ -40,7 +40,7 @@ struct BrandMarkView: View {
                 )
                 .padding(size * 0.16)
 
-            Text("B")
+            Text("S")
                 .font(.system(size: size * 0.42, weight: .black, design: .rounded))
                 .foregroundStyle(.white)
                 .offset(y: size * 0.01)
@@ -59,7 +59,7 @@ struct BrandWordmarkView: View {
     var body: some View {
         HStack(spacing: 10) {
             BrandMarkView(size: 34)
-            Text("B-engel")
+            Text("Siper")
                 .font(.system(size: 26, weight: .black, design: .rounded))
                 .foregroundStyle(CS.primary)
         }

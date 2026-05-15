@@ -1,8 +1,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("kvkkConsentAccepted") private var kvkkConsentAccepted = false
+
     var body: some View {
-        ComposeView()
-            .ignoresSafeArea() // Let Compose handle safe areas
+        Group {
+            if kvkkConsentAccepted {
+                ComposeView()
+            } else {
+                LegalConsentView()
+            }
+        }
     }
 }

@@ -10,33 +10,24 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         completion: @escaping (ILMessageFilterQueryResponse) -> Void
     ) {
         let response = ILMessageFilterQueryResponse()
-        let (action, reason) = offlineAction(for: queryRequest)
+        let decision = AppGroupStorage.shared.decision(
+            sender: queryRequest.sender,
+            body: queryRequest.messageBody
+        )
+        let action: ILMessageFilterAction = decision.shouldBlock ? .junk : .none
         response.action = action
+        AppGroupStorage.shared.recordFilterInvocation(sender: queryRequest.sender, decision: decision)
 
         // Record filtered messages silently — no notification, user sees it in app.
         if action == .junk {
-            AppGroupStorage.shared.recordFiltered(sender: queryRequest.sender ?? "", reason: reason)
+            AppGroupStorage.shared.recordFiltered(
+                sender: queryRequest.sender ?? "",
+                reason: decision.reason,
+                detail: decision.detail,
+                preview: queryRequest.messageBody ?? ""
+            )
         }
 
         completion(response)
-    }
-
-    // MARK: - Offline decision
-    private func offlineAction(for request: ILMessageFilterQueryRequest) -> (ILMessageFilterAction, String) {
-        let storage = AppGroupStorage.shared
-
-        if let sender = request.sender, storage.isTrusted(sender) {
-            return (.none, "")
-        }
-
-        if let sender = request.sender, storage.isBlockedNumber(sender) {
-            return (.junk, "sender")
-        }
-
-        if let body = request.messageBody, storage.containsFraudKeyword(in: body) {
-            return (.junk, "keyword")
-        }
-
-        return (.none, "")
     }
 }

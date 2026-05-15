@@ -1,6 +1,6 @@
 name: Callshield
 options:
-  bundleIdPrefix: com.callshield
+  bundleIdPrefix: com.metinkorunc
   deploymentTarget:
     iOS: "16.0"
   xcodeVersion: "15.0"
@@ -9,9 +9,14 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    DEVELOPMENT_TEAM: ""          # Set in CI via DEVELOPMENT_TEAM secret
+    DEVELOPMENT_TEAM: ZG3C9W7D9R
     CODE_SIGN_STYLE: Automatic
     IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+
+packages:
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads.git
+    from: 13.3.0
 
 targets:
   Callshield:
@@ -19,18 +24,24 @@ targets:
     platform: iOS
     sources:
       - path: Callshield
+      - path: Assets.xcassets
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.callshield.ios
+        PRODUCT_BUNDLE_IDENTIFIER: com.metinkorunc.bengel
         INFOPLIST_FILE: Callshield/App/Info.plist
-        MARKETING_VERSION: "1.0.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ADMOB_APP_ID: ca-app-pub-9470257458177643~5806267157
+        ADMOB_BANNER_AD_UNIT_ID: ca-app-pub-9470257458177643/8452611793
+        MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
     entitlements:
       path: Callshield/Callshield.entitlements
       properties:
         com.apple.security.application-groups:
-          - group.com.callshield
+          - group.com.metinkorunc.bengel
     dependencies:
+      - package: GoogleMobileAds
+        product: GoogleMobileAds
       - target: SmsFilter
         embed: true
 
@@ -41,13 +52,15 @@ targets:
       - path: SmsFilter
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.callshield.ios.SmsFilter
+        PRODUCT_BUNDLE_IDENTIFIER: com.metinkorunc.bengel.SmsFilter
         INFOPLIST_FILE: SmsFilter/Info.plist
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
     entitlements:
       path: SmsFilter/SmsFilter.entitlements
       properties:
         com.apple.security.application-groups:
-          - group.com.callshield
+          - group.com.metinkorunc.bengel
     dependencies:
       - sdk: IdentityLookup.framework
 

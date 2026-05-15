@@ -1,0 +1,156 @@
+{
+  "identifier" : "E7C4F5B6-2D91-4F27-8BA3-8CF7B6B1761B",
+  "nonConsumables" : [
+
+  ],
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "0",
+    "_developerTeamID" : "ZG3C9W7D9R",
+    "_lastSynchronizedDate" : 768614400,
+    "_locale" : "tr_TR",
+    "_storefront" : "TUR",
+    "_storeKitErrors" : [
+
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "SIPER_PREMIUM_GROUP",
+      "localizations" : [
+        {
+          "locale" : "tr_TR",
+          "name" : "Siper Premium"
+        }
+      ],
+      "name" : "Siper Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "80",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "SIPER_STANDARD_MONTHLY",
+          "introductoryOffer" : {
+            "internalID" : "SIPER_STANDARD_MONTHLY_TRIAL",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P7D"
+          },
+          "localizations" : [
+            {
+              "description" : "Reklamsız ve sınırsız Siper koruması.",
+              "displayName" : "Standart Aylık",
+              "locale" : "tr_TR"
+            }
+          ],
+          "productID" : "bengel_standard_monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Standart Aylık",
+          "subscriptionGroupID" : "SIPER_PREMIUM_GROUP",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "600",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "SIPER_STANDARD_YEARLY",
+          "introductoryOffer" : {
+            "internalID" : "SIPER_STANDARD_YEARLY_TRIAL",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P7D"
+          },
+          "localizations" : [
+            {
+              "description" : "Reklamsız ve sınırsız Siper koruması.",
+              "displayName" : "Standart Yıllık",
+              "locale" : "tr_TR"
+            }
+          ],
+          "productID" : "bengel_standard_yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Standart Yıllık",
+          "subscriptionGroupID" : "SIPER_PREMIUM_GROUP",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "150",
+          "familyShareable" : true,
+          "groupNumber" : 3,
+          "internalID" : "SIPER_FAMILY_MONTHLY",
+          "introductoryOffer" : {
+            "internalID" : "SIPER_FAMILY_MONTHLY_TRIAL",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P7D"
+          },
+          "localizations" : [
+            {
+              "description" : "Aile planı ile 5 cihaza kadar Siper koruması.",
+              "displayName" : "Aile Aylık",
+              "locale" : "tr_TR"
+            }
+          ],
+          "productID" : "bengel_family_monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Aile Aylık",
+          "subscriptionGroupID" : "SIPER_PREMIUM_GROUP",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "1100",
+          "familyShareable" : true,
+          "groupNumber" : 4,
+          "internalID" : "SIPER_FAMILY_YEARLY",
+          "introductoryOffer" : {
+            "internalID" : "SIPER_FAMILY_YEARLY_TRIAL",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P7D"
+          },
+          "localizations" : [
+            {
+              "description" : "Aile planı ile 5 cihaza kadar Siper koruması.",
+              "displayName" : "Aile Yıllık",
+              "locale" : "tr_TR"
+            }
+          ],
+          "productID" : "bengel_family_yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Aile Yıllık",
+          "subscriptionGroupID" : "SIPER_PREMIUM_GROUP",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}
