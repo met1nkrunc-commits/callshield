@@ -1,6 +1,6 @@
 {
-  "version": 22,
-  "updated_at": "2026-08-10T04:38:23Z",
+  "version": 23,
+  "updated_at": "2026-08-17T03:50:25Z",
   "numbers": [
     {
       "number": "+902121234567",
@@ -2342,6 +2342,20 @@
     },
     {
       "number": "+905521786318",
+      "risk_level": "HIGH",
+      "category": "SPAM",
+      "report_count": 1,
+      "note": "community-reported"
+    },
+    {
+      "number": "+903125680447",
+      "risk_level": "HIGH",
+      "category": "SPAM",
+      "report_count": 1,
+      "note": "community-reported"
+    },
+    {
+      "number": "+903129118028",
       "risk_level": "HIGH",
       "category": "SPAM",
       "report_count": 1,
